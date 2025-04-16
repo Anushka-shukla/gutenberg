@@ -12,19 +12,19 @@ interface Author {
 }
 interface Book {
     authors: Author[],
-    // @ts-ignore
+    //  @ts-ignore @ts-expect-error
     bookshelves: any[],
     copyright: boolean,
     download_count: number,
     formats: Format,
     id: number,
-    // @ts-ignore
+    //  @ts-ignore @ts-expect-error
     language: any[],
     media_type: string,
-    // @ts-ignore
+     //  @ts-ignore @ts-expect-error
     subjects: any[],
     title: string,
-    // @ts-ignore
+    //  @ts-ignore @ts-expect-error
     translators: any[]
 
 }
