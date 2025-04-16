@@ -24,7 +24,7 @@ interface Book {
      //  @ts-ignore @ts-expect-error
     subjects: any[],
     title: string,
-    //  @ts-ignore @ts-expect-error
+    
     translators: any[]
 
 }
