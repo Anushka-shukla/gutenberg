@@ -1,7 +1,4 @@
 import "./globals.css";
-
-
-// Example: using Inter from Google Fonts
 import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({
