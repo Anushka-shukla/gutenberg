@@ -27,16 +27,13 @@ const CategoryList = () => {
     const router = useRouter();
 
     const handleCategoryClick = (category: string) => {
-        let categoryName = category.toLowerCase();
+        const categoryName = category.toLowerCase();
       
         router.push(`/book/${categoryName}`)
 
         console.log(`category::: ${category}`)
 
     }
-
-
-
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

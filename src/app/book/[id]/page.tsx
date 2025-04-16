@@ -69,7 +69,7 @@ const BooksView = () => {
     useEffect(() => {
         getBooksData();
 
-    }, [])
+    })
 
 
 
