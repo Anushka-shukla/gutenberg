@@ -31,7 +31,6 @@ const CategoryList = () => {
       
         router.push(`/book/${categoryName}`)
 
-        console.log(`category::: ${category}`)
 
     }
 

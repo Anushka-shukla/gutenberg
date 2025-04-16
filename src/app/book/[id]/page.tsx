@@ -19,19 +19,15 @@ interface Author {
 }
 interface Book {
     authors: Author[],
-    //  @ts-ignore @ts-expect-error
     bookshelves: any[],
     copyright: boolean,
     download_count: number,
     formats: Format,
     id: number,
-    //  @ts-ignore @ts-expect-error
     language: any[],
     media_type: string,
-     //  @ts-ignore @ts-expect-error
     subjects: any[],
     title: string,
-    //  @ts-ignore @ts-expect-error
     translators: any[]
 
 }
@@ -39,9 +35,6 @@ interface Book {
 const BooksView = () => {
     const router = useRouter();
     const params = useParams();
-    const category = params.category;
-    console.log("category:::::", params);
-
 
     const [books, setBooks] = useState<Book[]>([]);
     const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
@@ -59,7 +52,6 @@ const BooksView = () => {
             }
             const jsonData = await res.json();
 
-            console.log(jsonData);
             setBooks(jsonData.results);
             setFilteredBooks(jsonData.results);
 

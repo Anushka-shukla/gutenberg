@@ -12,19 +12,15 @@ interface Author {
 }
 interface Book {
     authors: Author[],
-    //  @ts-ignore @ts-expect-error
     bookshelves: any[],
     copyright: boolean,
     download_count: number,
     formats: Format,
     id: number,
-    //  @ts-ignore @ts-expect-error
     language: any[],
     media_type: string,
-     //  @ts-ignore @ts-expect-error
     subjects: any[],
     title: string,
-    
     translators: any[]
 
 }
@@ -41,7 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ books, setFilteredBooks }) => {
     const [isFocused, setIsFocused] = useState(false);
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        var value = e.target.value.toLowerCase();
+        const value = e.target.value.toLowerCase();
         setSearchTerm(value);
 
         const filtered = books.filter((book: Book) => {
