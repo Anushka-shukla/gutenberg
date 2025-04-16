@@ -46,7 +46,7 @@ const BooksView = () => {
     async function getBooksData() {
 
         try {
-            const res = await fetch(`http://skunkworks.ignitesol.com:8000/books/?mime_type=${encodeURIComponent("image/jpeg")}&topic=${params.id}`);
+            const res = await fetch(`https://skunkworks.ignitesol.com:8000/books/?mime_type=${encodeURIComponent("image/jpeg")}&topic=${params.id}`);
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status} - ${res.statusText}`);
             }
